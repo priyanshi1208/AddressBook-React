@@ -1,0 +1,31 @@
+{
+  "person": [
+    {
+      "id": 1,
+      "name": "Ayush",
+      "number": "9876509876545678",
+      "address": "dfghjkl;",
+      "city": "knp",
+      "state": "Lakshadweep",
+      "zipCode": "208021"
+    },
+    {
+      "id": 2,
+      "name": "Virat Shukla",
+      "number": "987650987654",
+      "address": "sdfghyjkl",
+      "city": "knp",
+      "state": "Goa",
+      "zipCode": "208021"
+    },
+    {
+      "id": 3,
+      "name": "Saumya",
+      "number": "987650987654",
+      "address": "zazqazsqasz",
+      "city": "knp",
+      "state": "Gujarat",
+      "zipCode": "208021"
+    }
+  ]
+}
