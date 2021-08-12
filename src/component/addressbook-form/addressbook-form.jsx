@@ -63,7 +63,8 @@ class AddressBookForm extends React.Component{
             console.log(id);
             new AddressBookService().getPersonById(id)
             .then(responseText => {
-                this.setForm(responseText.data);
+                let responseData=responseText.data;
+                this.setForm(responseData.data);
                 console.log(console.log("Data retrieved"));
             }).catch(error => {
                 console.log("Error while Fetching Data"+JSON.stringify(error.data));

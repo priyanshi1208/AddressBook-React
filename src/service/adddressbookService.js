@@ -3,12 +3,10 @@ import AxiosService from '../service/axios';
 class AddressBookService{
     url=configuration.url;
     addPerson(data){
-        
-        console.log(AxiosService.postService(`${this.url}addressbook/post`,data));
-        window.alert(data)
         return AxiosService.postService(`${this.url}addressbook/post`,data);
     }
     getAllPerson() {
+        console.log(AxiosService.getService(`${this.url}addressbook/get`));
         return AxiosService.getService(`${this.url}addressbook/get`);
     }
     deletePerson(id){

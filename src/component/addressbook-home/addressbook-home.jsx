@@ -10,21 +10,26 @@ class AddressBookHome extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            addressbookData:[]
+            addressbookData:[],
+            personArray:[]
         }
+        this.addressBookService = new AddressBookService();
     }
     componentDidMount(){
         this.getPersonList();
     }
     getPersonList(){
-        new AddressBookService().getAllPerson()
+        this.addressBookService.getAllPerson()
         .then(response=>{
+            let responseText=response.data;
+            console.log("Response:",response);
             this.setState({
-                addressbookData:response.data
+                addressbookData:responseText.data,
+                personArray:responseText.data
             });
         })
         .catch(error=>{
-            console.log("Error in getting addressbook data"+JSON.stringify(error.data));
+            console.log("Error in getting addressbook data"+JSON.stringify(error));
         })
     }
     render(){
